@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ithaca Apple Harvest Festival</title>
+  <link rel = "stylesheet"
+  type = "text/css"
+  href = "styles/site.css" />
+  <script src="scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="scripts/validation.js" type="text/javascript"></script>
+</head>
+<body>
+  <div class = "heroimage">
+    <div class = "herotext">
+    <p>ITHACA APPLE HARVEST FESTIVAL</p>
+    </div>
+  </div>
+  <header>
+    <div class = "logo">
+      <!-- Source: (original work) Nahbuma Gana -->
+      <img src ="images/logo.png" alt = "logo"/>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="transport.html">Transportation</a></li>
+        <li><a href="foods.html">Foods</a></li>
+        <li><a href="feedback.html">Talk to Us!</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class ="fcontent">
+      <form id="FeedbackForm" method="post" action= "https://www.cs.cornell.edu/courses/cs1300/2019fa/submit.php" novalidate>
+
+        <div class = "forcon">
+          <label for="userName">Name: </label>
+          <input type= "text" id="userName" placeholder="Your Name" required/>
+          <span class="error_message hidden" id="name_error">
+            Please proivde a valid name
+          </span>
+        </div>
+
+        <div class="radio">
+          <p>Select School Year<p>
+          <div>
+            <input type="radio" id="freshman" name="year" value="freshman" checked>
+            <label for="freshman">freshman</label>
+          </div>
+          <div>
+            <input type="radio" id="sophomore" name="year" value="sophomore">
+            <label for="sophomore">sophomore</label>
+          </div>
+
+          <div>
+            <input type="radio" id="junior" name="year" value="junior">
+            <label for="junior">junior</label>
+          </div>
+
+          <div>
+            <input type="radio" id="senior" name="year" value="senior">
+            <label for="senior">senior</label>
+          </div>
+          <div>
+            <div class= "special">
+              <input type="radio" id="other" name="year" value="other">
+              <label for="other">other</label>
+            </div>
+            <div class="special">
+              <input type="text" class="others" placeholder="ex.) sophomore transfer" id="others"/>
+            </div>
+            <span class="error_message hidden" id="other_error">
+              Please describe student status
+            </span>
+          </div>
+        </div>
+
+
+        <div class = "email">
+          <label for="userEmail">Email: </label>
+          <input type="email" id="userEmail" name="userEmail" placeholder="Your Email" required/>
+
+          <span class="error_message hidden" id="email_error">
+            Please proivde a valid email address
+          </span>
+        </div>
+        <div>
+          <label for="phone">Cell:</label>
+          <input type="tel" id="phone" placeholder="ex.) 888-888-8888" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+          <span class="error_message hidden" id="tel_error">
+            Please proivde a valid phone number
+          </span>
+        </div>
+
+        <p>What day(s) did you attend:</p>
+
+        <div class = "checks">
+          <span class="error_message hidden" id="date_error">
+            Please select at least one date
+          </span>
+
+          <div>
+            <input type="checkbox" id="fri"/>
+            <label for="fri">Friday, September 27, 2019</label>
+          </div>
+          <div>
+            <input type="checkbox" id="sat"/>
+            <label for="sat">Saturday, September 28, 2019</label>
+          </div>
+          <div>
+            <input type="checkbox" id="sun"/>
+            <label for="sun">Sunday, September 29, 2019</label>
+          </div>
+        </div>
+
+      <p>Please Rate Your Experience:</p>
+        <div class = "forcon">
+          <select name="Rating">
+            <option value="very bad">Very Bad</option>
+            <option value="bad">Bad</option>
+            <option value="neutral">Neutral</option>
+            <option value="good">Good</option>
+            <option value="very good">Very Good</option>
+          </select>
+        </div>
+        <div class = "textarea">
+          <p>Tell Us More!</p>
+          <textarea rows= "4"  cols= "70" placeholder="feel free to justify your rating"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="submit">Submit</button>
+        </div>
+      </form>
+  </div>
